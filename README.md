@@ -5,6 +5,6 @@ It calculates the length of initiatory line, the length of period, and the numbe
 
 It takes the beggining 2 elements from 0..99.
 
-The neumann.h header conatins the used class, neumann.cpp source file is the code containing the calculations.
+The neumann.h header contains the used class, neumann.cpp source file is the code containing the calculations.
 
 The final results can be seen in an added txt file.
