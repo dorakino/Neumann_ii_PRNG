@@ -59,7 +59,6 @@ public:
 
         int temp6;
         int temp7;
-
         bool appeared = false;
         while(!appeared){
             temp6 = generateNumber(myInt1,myInt2);
