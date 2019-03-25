@@ -8,3 +8,4 @@ It takes the beggining 2 elements from 0..99.
 The neumann.h header contains the used class, neumann.cpp source file is the code containing the calculations.
 
 The final results can be seen in an added txt file.
+
