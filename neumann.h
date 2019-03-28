@@ -1,7 +1,8 @@
 #ifndef _NEUMANN_H
 #define  _NEUMANN_H
-
+#include <vector>
 #include <iostream>
+#include <math.h>
 using namespace std;
 
 class NeumannSecondGenerator{
@@ -11,8 +12,9 @@ private:
 
     int bev = 0;
     int per = 0;
+
 public:
-    void setNumbers(const int& first,const int& second){
+    void setNumbers(const int& first, const int& second){
         a = first;
         b = second;
     };
@@ -40,6 +42,7 @@ public:
                 myArr[i-1] = 0;
             }
         }
+
         if(numberOfDigits < 3){
             result = myArr[2] * 10 + myArr[3];
         }
@@ -48,11 +51,11 @@ public:
         }
         return result;
     };
+
+
     void method(){
         int cnt = 2;
-        int tempArr[200];
-        tempArr[0] = a;
-        tempArr[1] = b;
+        vector<int> myTempVec{a,b};
 
         int myInt1 = a;
         int myInt2 = b;
@@ -61,14 +64,16 @@ public:
         int temp7;
         bool appeared = false;
         while(!appeared){
+
             temp6 = generateNumber(myInt1,myInt2);
             temp7 = generateNumber(myInt2,temp6);
 
-            tempArr[cnt] = temp6;
+            myTempVec.push_back(temp6);
+
             int j = 0;
             while(j < cnt)
             {
-                if((tempArr[j] == temp6) && (tempArr[j+1] == temp7)){
+                if((myTempVec[j] == temp6) && (myTempVec[j+1] == temp7)){
                     appeared = true;
                     bev = j;
                     per = cnt - bev;
@@ -76,14 +81,16 @@ public:
                 }
                 j++;
             }
+
             if(cnt == 2 && bev == 0){
                 per = 1;
             }
+
             myInt1 = myInt2;
             myInt2 = temp6;
             cnt++;
         }
-    };
+   };
     int getFirst(){
         return a;
     };
@@ -99,5 +106,7 @@ public:
     int getPer(){
         return per;
     };
+
 };
+
 #endif
