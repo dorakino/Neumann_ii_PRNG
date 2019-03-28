@@ -9,3 +9,5 @@ The neumann.h header contains the used class, neumann.cpp source file is the cod
 
 The final results can be seen in an added txt file.
 
+Some radical changes were made comparing to the first result.
+
