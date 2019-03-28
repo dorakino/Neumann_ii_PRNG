@@ -2,7 +2,6 @@
 #include <vector>
 #include <algorithm>
 #include "hey.h"
-
 using namespace std;
 
 int main()
