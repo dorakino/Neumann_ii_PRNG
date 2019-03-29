@@ -42,13 +42,7 @@ public:
                 myArr[i-1] = 0;
             }
         }
-
-        if(numberOfDigits < 3){
-            result = myArr[2] * 10 + myArr[3];
-        }
-        else{
-            result = myArr[1] * 10 + myArr[2];
-        }
+        result = myArr[1] * 10 + myArr[2];
         return result;
     };
 
@@ -70,8 +64,8 @@ public:
 
             myTempVec.push_back(temp6);
 
-            int j = 0;
-            while(j < cnt)
+            int j = cnt - 1;
+            while(j >= 0)
             {
                 if((myTempVec[j] == temp6) && (myTempVec[j+1] == temp7)){
                     appeared = true;
@@ -79,13 +73,9 @@ public:
                     per = cnt - bev;
                     break;
                 }
-                j++;
+                j--;
             }
-
-            if(cnt == 2 && bev == 0){
-                per = 1;
-            }
-
+            
             myInt1 = myInt2;
             myInt2 = temp6;
             cnt++;
